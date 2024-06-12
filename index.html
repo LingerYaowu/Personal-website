@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal website</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="./style/home_page.css">
+    <link rel="stylesheet" href="./style/article.css">
+</head>
+
+<body>
+    <div class="outside">
+        <div class="nav">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="javascript:void(0);">零二幺伍</a>
+            </div>
+            <!-- Search and navitems -->
+            <div class="nav_content">
+                <!-- 搜索框 -->
+                <div class="search">
+                    <span>
+                        <span class="iconfont icon-sousuo"></span>
+                        <kbd>CTRL+M</kbd>
+                    </span>
+                    <div class="searchBox">
+                        <div class="searchOutside">
+                            <div class="search_input">
+                                <div>
+                                    <span class="iconfont icon-sousuo"></span>
+                                    <input autofocus type="text" placeholder="搜索文档" autocomplete="off" name="searchContent">
+                                </div>
+                            </div>
+                            <div class="search_result">
+                                <p class="title">搜索结果</p>
+                                <ul>
+                                    <div class="empty">没有记载信息</div>
+                                    <!-- <li class="active">
+                                        <div class="selt_icon">
+                                            <span class="iconfont icon-xuanxiang"></span>
+                                        </div>
+                                        <div class="result">
+                                            <p class="tit">商城项目源码，vue3+typescript</p>
+                                            <p class="label">Javascript</p>
+                                        </div>
+                                        <div class="enter">↵</div>
+                                    </li>
+                                    <li>
+                                        <div class="selt_icon">
+                                            <span class="iconfont icon-xuanxiang"></span>
+                                        </div>
+                                        <div class="result">
+                                            <p class="tit">原生JS开发商城项目</p>
+                                            <p class="label">Javascript</p>
+                                        </div>
+                                        <div class="enter">↵</div>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <div class="search_info">
+                                <div class="left">
+                                    <kbd>ESC</kbd><span>关闭</span>
+                                </div>
+                                <div class="right">
+                                    零二幺伍
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 导航条项 -->
+                <ul class="items">
+                    <li class="active">
+                        <span>Home</span>
+                        <span><span class="iconfont icon-xuanxiang"></span></span>
+                    </li>
+                    <li>
+                        <span>Vue2 <span class="iconfont icon-arrow-down"></span></span>
+                        <div class="children">
+                            <div><a href="javascript:void(0);">笔记</a></div>
+                            <div><a href="javascript:void(0);">Element UI</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>数据结构 <span class="iconfont icon-arrow-down"></span></span>
+                        <div class="children">
+                            <div><a href="javascript:void(0);">插入排序</a></div>
+                            <div><a href="javascript:void(0);">希尔排序</a></div>
+                            <div><a href="javascript:void(0);">归并排序</a></div>
+                            <div><a href="javascript:void(0);">随机化快速排序</a></div>
+                            <div><a href="javascript:void(0);">三路排序算法</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>ThinkPHP <span class="iconfont icon-arrow-down"></span></span>
+                        <div class="children">
+                            <div><a href="javascript:void(0);">ThinkPHP实战</a></div>
+                            <div><a href="javascript:void(0);">商城项目</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>SpringBoot <span class="iconfont icon-arrow-down"></span></span>
+                        <div class="children">
+                            <div><a href="javascript:void(0);">BeanFactory和ApplicationContext的区别</a></div>
+                            <div><a href="javascript:void(0);">Spring的IoC</a></div>
+                            <div><a href="javascript:void(0);">Spring 的优点</a></div>
+                            <div><a href="javascript:void(0);">Spring是什么</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>React <span class="iconfont icon-arrow-down"></span></span>
+                        <div class="children">
+                            <div><a href="javascript:void(0);">构建用户页面</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>About <span class="iconfont icon-arrow-down"></span></span>
+                        <div class="children">
+                            <div><a href="javascript:void(0);">合作伙伴</a></div>
+                            <div><a href="javascript:void(0);">赞助</a></div>
+                            <div><a href="javascript:void(0);">网站信息</a></div>
+                            <div><a href="javascript:void(0);">联系我们</a></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- user information -->
+            <div class="user_info">
+                <div class="avatar">
+                    <img src="./images/avatar.png">
+                </div>
+                <div class="setting">
+                    <a class="username" href="javascript:void(0);">Administrator</a>
+                    <div class="tools">
+                        <p class="arrow"></p>
+                        <div class="tool_item">
+                            <div>
+                                <div class="icon"><span class="iconfont icon-gerenzhuye"></span></div>
+                                <div class="name">个人主页</div>
+                            </div>
+                            <div>
+                                <div class="icon"><span class="iconfont icon-github"></span></div>
+                                <div class="name">Github</div>
+                            </div>
+                            <div>
+                                <div class="icon"><span class="iconfont icon-csdn"></span></div>
+                                <div class="name">CSDN</div>
+                            </div>
+                            <div>
+                                <div class="icon"><span class="iconfont icon-shezhi"></span></div>
+                                <div class="name">设置</div>
+                            </div>
+                            <div>
+                                <div class="icon"><span class="iconfont icon-tuichu"></span></div>
+                                <div class="name">退出</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home_page">
+            <div class="bg">
+                <div class="white">
+                    <div class="watermark">
+                        <span name="website">website</span>
+                        <span name="qianduan">前端</span>
+                        <span name="git">Git</span>
+                        <span name="jquery">JQuery</span>
+                        <span name="html">HTML</span>
+                        <span name="kuangjia">框架</span>
+                        <span name="sass">Sass</span>
+                        <span name="vue">Vue</span>
+                        <!-- 重复 -->
+                        <span name="github">Github</span>
+                        <span name="thinkphp">ThinkPHP</span>
+                        <span name="java">Java</span>
+                        <span name="php">PHP</span>
+                    </div>
+                    <div class="vue">
+                        <div class="bottom"></div>
+                        <div class="center"></div>
+                        <div class="top"></div>
+                    </div>
+                    <div class="titles">
+                        <p class="title">
+                            <span>最</span>
+                            <span>棒</span>
+                            <span>的</span>
+                            <span>前</span>
+                            <span>端</span>
+                            <span>渐</span>
+                            <span>进</span>
+                            <span>式</span>
+                            <span>框</span>
+                            <span>架</span>
+                        </p>
+                        <div class="subtitle">
+                            <p>Vue.js</p>
+                            <p>Vue.js</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="black">
+                    <div class="watermark">
+                        <span name="houduan">后端</span>
+                        <span name="system">系统</span>
+                        <span name="ubuntu">Ubuntu</span>
+                        <span name="node">Node</span>
+                        <span name="python">Python</span>
+                        <span name="linux">Linux</span>
+                        <!-- 重复 -->
+                        <span name="github">Github</span>
+                        <span name="thinkphp">ThinkPHP</span>
+                        <span name="java">Java</span>
+                        <span name="php">PHP</span>
+                    </div>
+                    <div class="vue">
+                        <div class="bottom"></div>
+                        <div class="center"></div>
+                        <div class="top"></div>
+                    </div>
+                    <div class="titles">
+                        <p class="title">
+                            <span>最</span>
+                            <span>棒</span>
+                            <span>的</span>
+                            <span>前</span>
+                            <span>端</span>
+                            <span>渐</span>
+                            <span>进</span>
+                            <span>式</span>
+                            <span>框</span>
+                            <span>架</span>
+                        </p>
+                        <div class="subtitle">
+                            <p>Vue.js</p>
+                            <p>Vue.js</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="next_page">
+                <span class="iconfont icon-16"></span>
+            </div>
+        </div>
+        <div class="article">
+            
+        </div>
+    </div>
+    <script src="./scripts/tools.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/nav.js"></script>
+    <script src="./scripts/home_page.js"></script>
+</body>
+
+</html>

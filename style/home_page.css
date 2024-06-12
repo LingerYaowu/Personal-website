@@ -1,3 +1,4 @@
+@import url('./media/home_page.css');
 .home_page {
     width: 100%;
     height: calc(100vh - 65px);
@@ -45,7 +46,7 @@
     margin-right: 60px;
     position: relative;
     opacity: 0;
-    transform: translateY(100px) scale(0.8);
+    transform: translateY(100px);
     animation: jianbian 1.2s .6s cubic-bezier(0.1, 0.57, 0.24, 0.94) forwards;
 }
 

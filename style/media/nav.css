@@ -91,13 +91,12 @@
     }
 
     div.nav .nav_content ul.items {
-        width: 75px;
+        width: 50px;
         height: 65px;
-        position: fixed;
+        position: absolute;
         right: 0;
         top: 0;
         z-index: 20;
-        background-color: transparent;
         box-shadow: 0 0 0 rgb(240, 240, 240);
         overflow: hidden;
         flex-direction: column;
@@ -106,7 +105,7 @@
     }
 
     div.nav .nav_content ul.items:hover {
-        width: 35vw;
+        width: 70vw;
         height: 100vh;
         box-shadow: -1px 0 0 rgb(240, 240, 240);
         background-color: rgba(0, 0, 0, 0.9);

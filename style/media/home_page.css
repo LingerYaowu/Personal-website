@@ -64,11 +64,11 @@
         }
 
         9% {
-            width: 235px;
+            width: 210px;
         }
 
         100% {
-            width: 235px;
+            width: 210px;
         }
     }
 
@@ -78,6 +78,10 @@
 }
 
 @media screen and (max-width: 460px) {
+    div.next_page span {
+        font-size: 50px;
+    }
+
     div.home_page .bg .vue {
         width: 200px;
         height: 160px;

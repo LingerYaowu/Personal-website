@@ -79,7 +79,7 @@
 
 @media screen and (max-width: 850px) {
     div.nav {
-        padding: 0 0 0 5px;
+        padding: 0 0 0 8px;
     }
 
     div.nav .nav_content {
@@ -92,7 +92,6 @@
 
     div.nav .nav_content ul.items {
         width: 50px;
-        height: 65px;
         position: absolute;
         right: 0;
         top: 0;
@@ -101,15 +100,19 @@
         overflow: hidden;
         flex-direction: column;
         background-color: transparent;
-        transition: all 0.4s linear;
+        transition: all 0.3s linear;
     }
 
     div.nav .nav_content ul.items:hover {
         width: 70vw;
-        height: 100vh;
         box-shadow: -1px 0 0 rgb(240, 240, 240);
         background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
     }
+
+    div.nav .nav_content ul.items:hover li:not(.active) {
+        opacity: 1;
+    } 
 
     div.nav .nav_content ul.items li:not(.active) {
         width: 100%;
@@ -117,6 +120,7 @@
         overflow: hidden;
         padding-left: 25px;
         box-sizing: border-box;
+        opacity: 0;
     }
 
     div.nav .nav_content ul.items li:not(.active)>span {

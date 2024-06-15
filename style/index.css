@@ -1,4 +1,4 @@
-@import url('https://at.alicdn.com/t/c/font_4578767_1zx8vvdnerd.css?spm=a313x.manage_type_myprojects.i1.9.20683a81AArAsx&file=font_4578767_1zx8vvdnerd.css');
+@import url('https://at.alicdn.com/t/c/font_4578767_bbknvgcu9pg.css?spm=a313x.manage_type_myprojects.i1.9.20683a81Krs35C&file=font_4578767_bbknvgcu9pg.css');
 
 * {
     margin: 0;
@@ -31,7 +31,6 @@ body {
 /* 小滑块 */
 .outside::-webkit-scrollbar-thumb {
     background-color: rgb(75, 75, 75);
-    border-radius: 10px;
 }
 
 .outside::-webkit-scrollbar-thumb:hover {

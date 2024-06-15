@@ -4,27 +4,33 @@ const outsideChildren = [
         gete('.outside >.nav'),
         gete('.outside >.home_page')
     ],
-    gete('.outside >.article')
+    gete('.outside >.article'),
+    gete('.outside >.a')
 ];
 
 /**
  * 当前处于哪个板块
  */
 let currentPage = 0;
-// outside.scrollTop = currentPage*document.body.clientHeight; 设置页面初始板块
+// outside.scrollTop = currentPage * document.body.clientHeight; //设置页面初始板块
 
 outside.addEventListener('wheel', throttle((e) => {
+    e.preventDefault();
     let changePage = e.wheelDelta > 0 ? true : false;
     if (changePage) {
         if (!(currentPage - 1 < 0)) {
-            moveScroll(--currentPage * outside.clientHeight, 30, 10);
+            moveScroll(--currentPage * outside.clientHeight, 9, 1);
         }
     } else {
         if (!(currentPage + 1 >= outsideChildren.length)) {
-            moveScroll(++currentPage * document.body.clientHeight, 30, 10)
+            moveScroll(++currentPage * outside.clientHeight, 9, 1)
         }
     }
-}, 300));
+}, 300, ()=> {
+    outside.addEventListener('wheel', (e)=> {
+        e.preventDefault();
+    })
+}));
 
 /**
  * 移动板块定时器
@@ -40,9 +46,6 @@ var moveScrollTimer;
 const moveScroll = (target, step, wait) => {
 
     if (!moveScrollTimer) {
-        if (target > outside.clientHeight) {
-            target = outside.clientHeight;
-        }
         if (target < 0) {
             target = 0;
         }

@@ -13,7 +13,7 @@ const gete = (e) => {
 /**
  * 设置元素样式
  * @param {NodeList} obj 
- * @param {object} styles 
+ * @param {Object} styles 
  */
 const setcss = (obj, styles)=> {
     for (const key in styles) {
@@ -27,10 +27,11 @@ var timer;
  * @param {Function} fun 要触发的函数
  * @param {Number} wait 等待的时间
  */
-const throttle = (fun, wait) => {
+const throttle = (fun, wait, overFun) => {
     return (...arg) => {
         if (!timer) {
             fun(...arg);
+            overFun();
             timer = setTimeout(() => {
                 clearTimeout(timer)
                 timer = null;

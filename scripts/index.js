@@ -19,14 +19,14 @@ outside.addEventListener('wheel', throttle((e) => {
     let changePage = e.wheelDelta > 0 ? true : false;
     if (changePage) {
         if (!(currentPage - 1 < 0)) {
-            moveScroll(--currentPage * outside.clientHeight, 9, 1);
+            moveScroll(--currentPage * outside.clientHeight, 5, 1);
         }
     } else {
         if (!(currentPage + 1 >= outsideChildren.length)) {
-            moveScroll(++currentPage * outside.clientHeight, 9, 1)
+            moveScroll(++currentPage * outside.clientHeight, 5, 1)
         }
     }
-}, 300, ()=> {
+}, 1000, ()=> {
     outside.addEventListener('wheel', (e)=> {
         e.preventDefault();
     })

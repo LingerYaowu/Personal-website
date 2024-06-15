@@ -8,6 +8,7 @@
     }
 
     div.nav .nav_content ul.items li {
+        user-select: none;
         margin: 0 2px;
     }
 

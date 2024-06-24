@@ -1,0 +1,171 @@
+.resource_share {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: rgb(55, 55, 55);
+    position: relative;
+}
+
+
+/* 标题 */
+.resource_share .title {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.resource_share .title div {
+    display: flex;
+    font: bolder 65px 'berlinsr';
+}
+
+.resource_share .title div span {
+    color: transparent;
+    text-shadow: 0 0 65px rgb(245, 245, 245);
+    opacity: 0;
+    user-select: none;
+}
+
+.resource_share .title div.start_animate span:nth-child(5) {
+    animation: title_animate 1s .2s linear forwards;
+}
+
+.resource_share .title div.start_animate span:nth-child(4),
+.resource_share .title div.start_animate span:nth-child(6) {
+    animation: title_animate 1s .4s linear forwards;
+}
+
+.resource_share .title div.start_animate span:nth-child(3),
+.resource_share .title div.start_animate span:nth-child(7) {
+    animation: title_animate 1s .6s linear forwards;
+}
+
+.resource_share .title div.start_animate span:nth-child(2),
+.resource_share .title div.start_animate span:nth-child(8) {
+    animation: title_animate 1s .8s linear forwards;
+}
+
+.resource_share .title div.start_animate span:nth-child(1),
+.resource_share .title div.start_animate span:nth-child(9) {
+    animation: title_animate 1s 1s linear forwards;
+}
+
+
+@keyframes title_animate {
+    0% {
+        text-shadow: 0 0 65px rgb(245, 245, 245);
+        opacity: 0; 
+    }
+    100% {
+        text-shadow: 0 0 0 rgb(245, 245, 245);
+        opacity: 1;
+    }
+}
+
+.resource_share .title div span {
+    margin: 0 3px;
+}
+
+/* 图片内容 */
+.resource_share .images {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resource_share .images div.big_mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.resource_share .images >div:not(.big_mask) {
+    width: 864px;
+    height: 486px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .3s linear;
+}
+
+.resource_share .images >div:not(.big_mask) >div {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    transition: all .4s linear;
+}
+
+.resource_share .images >div:not(.big_mask) >div div {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(4px);
+}
+
+.resource_share .images >div:not(.big_mask) >div.active div {
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0);
+}
+
+.resource_share .images >div:not(.big_mask) >div:nth-of-type(1) {
+    transform: translateZ(200px);
+}
+
+.resource_share .images >div:not(.big_mask) >div:nth-of-type(2) {
+    transform: translateX(320px) scale(0.8);
+}
+
+.resource_share .images >div:not(.big_mask) >div:nth-of-type(3) {
+    transform: translateZ(-200px) scale(0.8);
+}
+
+.resource_share .images >div:not(.big_mask) >div:nth-of-type(4) {
+    transform: translateX(-320px) scale(0.8);
+}
+
+/* 按钮控件 */
+.resource_share .control_btns {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.control_btns ul {
+    list-style: none;
+    display: flex;
+}
+
+.control_btns ul li {
+    width: 15px;
+    height: 15px;
+    margin: 0 3px;
+    border-radius: 100px;
+    background-color: rgb(200, 200, 200);
+    cursor: pointer;
+    transition: .1s linear;
+    position: relative;
+    z-index: 11;
+}
+
+.control_btns ul li:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.control_btns ul li.active {
+    width: 60px;
+}

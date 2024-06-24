@@ -5,7 +5,7 @@ const outsideChildren = [
         gete('.outside >.home_page')
     ],
     gete('.outside >.article'),
-    gete('.outside >.a')
+    gete('.outside >.resource_share')
 ];
 
 /**
@@ -19,15 +19,15 @@ outside.addEventListener('wheel', throttle((e) => {
     let changePage = e.wheelDelta > 0 ? true : false;
     if (changePage) {
         if (!(currentPage - 1 < 0)) {
-            moveScroll(--currentPage * outside.clientHeight, 5, 1);
+            moveScroll(--currentPage * outside.clientHeight, 11, 1);
         }
     } else {
         if (!(currentPage + 1 >= outsideChildren.length)) {
-            moveScroll(++currentPage * outside.clientHeight, 5, 1)
+            moveScroll(++currentPage * outside.clientHeight, 11, 1)
         }
     }
-}, 1000, ()=> {
-    outside.addEventListener('wheel', (e)=> {
+}, 600, () => {
+    outside.addEventListener('wheel', (e) => {
         e.preventDefault();
     })
 }));
@@ -36,6 +36,13 @@ outside.addEventListener('wheel', throttle((e) => {
  * 移动板块定时器
  */
 var moveScrollTimer;
+
+/**轮播图自动轮播定时器 */
+var carouselTimer;
+
+/**资源分享中的轮播图定时器 */
+let share_timer;
+let share_current = 0;
 
 /**
  * 
@@ -52,17 +59,40 @@ const moveScroll = (target, step, wait) => {
         moveScrollTimer = setInterval(() => {
             if (target > outside.scrollTop) {
                 outside.scrollTop += step;
-                if (target <= outside.scrollTop) {
+                if (outside.scrollTop + step > target) {
+                    outside.scrollTop = target;
                     clearInterval(moveScrollTimer);
                     moveScrollTimer = null;
                 }
             } else if (target < outside.scrollTop) {
                 outside.scrollTop -= step;
-                if (target >= outside.scrollTop) {
+                if (outside.scrollTop - step < target) {
+                    outside.scrollTop = target;
                     clearInterval(moveScrollTimer);
                     moveScrollTimer = null;
                 }
             }
         }, wait);
+    }
+
+    if (currentPage == 1) {
+        if (!carouselTimer) {
+            carouselTimer = setInterval(autoCarousel, 5000);
+        }
+    } else {
+        clearInterval(carouselTimer)
+        carouselTimer = null;
+    }
+
+    if (currentPage == 2) {
+        setClass(res_share_doms.share_tit, 'start_animate');
+        if (!share_timer) {
+            share_timer = setInterval(()=> {
+                change_share(++share_current);
+            }, 4000);
+        }
+    } else {
+        clearInterval(share_timer);
+        share_timer = null;
     }
 };

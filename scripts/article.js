@@ -71,12 +71,12 @@ carousel_right.addEventListener('click', () => {
     changeCarousel(current_carousel_id);
 })
 
-/* 自动轮播 */
-setInterval(() => {
+/**自动轮播函数 */
+const autoCarousel = () => {
     if (current_carousel_id + 1 > carouselBigItem.length - 1) {
         current_carousel_id = 0;
     } else {
         current_carousel_id++;
     }
     changeCarousel(current_carousel_id);
-}, 5000)
+};

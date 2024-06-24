@@ -63,7 +63,7 @@
     overflow: hidden;
     border: solid 1px rgb(210, 210, 210);
     box-sizing: border-box;
-    margin: 0 2px;
+    margin: 0 4px;
     cursor: pointer;
     transition: all .1s linear;
 }
@@ -71,7 +71,8 @@
 .top .select .selt_items>div div {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(1px);
     transition: all .1s linear;
 }
 
@@ -83,6 +84,7 @@
 .top .select .selt_items>div.active div,
 .top .select .selt_items>div:hover div {
     background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0);
 }
 
 /* 左右箭头 */

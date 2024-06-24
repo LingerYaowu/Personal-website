@@ -8,7 +8,7 @@
 
 body {
     background-color: rgb(250, 250, 250);
-
+    -webkit-tap-highlight-color: transparent; /*取消手机端点击后蓝色背景*/
 }
 
 /* 定义自定义属性 */
@@ -46,7 +46,7 @@ a {
 
 kbd {
     border-radius: 3px;
-    padding: 2px 3.5px;
+    padding: 2px 4px!important;
     border: 1px solid;
     box-shadow: 0 0 1px white;
 }
